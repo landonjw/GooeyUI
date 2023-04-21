@@ -1,0 +1,41 @@
+modLoader = "javafml"
+loaderVersion = "[43,)"
+issueTrackerURL = "https://github.com/landonjw/GooeyUI/issues"
+license = "MIT License"
+
+[[mods]]
+modId = "gooeyui"
+version = "${version}"
+displayName = "GooeyUI"
+authors = "landonjw"
+description = '''
+Allows for creating dynamic user interfaces from Minecraft inventories
+'''
+#logoFile = ""
+
+[[dependencies.gooeyui]]
+modId = "forge"
+mandatory = true
+versionRange = "[43,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.gooeyui]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.19.2,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.gooeyui]]
+modId = "architectury"
+mandatory = true
+versionRange = "[6.5.69,)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.gooeyui]]
+modId = "gooeylibs"
+mandatory = true
+ordering = "AFTER"
+side = "SERVER"

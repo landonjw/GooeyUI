@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "gooeyui",
+  "version": "${version}",
+  "name": "GooeyUI",
+  "description": "Allows for creating dynamic user interfaces from Minecraft inventories",
+  "authors": [
+    "landonjw"
+  ],
+  "contact": {
+    "homepage": "https://github.com/landonjw",
+    "sources": "https://github.com/landonjw/GooeyUI"
+  },
+  "license": "MIT License",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "dev.landonjw.gooeyui.fabric.GooeyUIFabric"
+    ]
+  },
+  "depends": {
+    "fabric": "*",
+    "minecraft": ">=1.19.2",
+	"architectury": ">=6.5.69",
+    "gooeylibs": "*"
+  }
+}
