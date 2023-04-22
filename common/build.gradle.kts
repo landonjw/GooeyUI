@@ -3,7 +3,6 @@ plugins {
     id("architectury-plugin")
 }
 
-
 architectury {
     common("forge", "fabric")
 }
@@ -12,7 +11,15 @@ loom {
     silentMojangMappingsLicense()
 }
 
+tasks.test {
+    useJUnitPlatform()
+}
+
 dependencies {
+    testImplementation("org.junit.jupiter:junit-jupiter:5.8.1")
+    testImplementation("org.junit.jupiter:junit-jupiter:5.8.1")
+    testImplementation("org.mockito:mockito-core:4.+")
+    testImplementation("org.mockito:mockito-junit-jupiter:4.6.1")
     minecraft("com.mojang:minecraft:${property("minecraft_version")}")
     // The following line declares the mojmap mappings, you may use other mappings as well
     mappings(loom.officialMojangMappings())
@@ -22,6 +29,7 @@ dependencies {
     implementation("net.kyori:adventure-text-minimessage:${property("minimessage_version")}")
     implementation("net.kyori:adventure-text-serializer-gson:${property("minimessage_version")}")
     modImplementation("ca.landonjw.gooeylibs:api:3.0.0-1.19.2-SNAPSHOT")
+    implementation("org.spongepowered:configurate-yaml:4.0.0")
 
     modApi("dev.architectury:architectury:${property("architectury_version")}") { isTransitive = false }
 }
